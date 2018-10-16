@@ -1,0 +1,44 @@
+
+#contact{
+	display: flex;
+	flex-wrap: wrap;
+	width: 30%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#contact .wrapper{
+	width: 100%;
+	margin-bottom: 20px;
+	
+}
+.wrapper input{
+	width: 100%;
+	margin-bottom: 3px;
+	border-radius: 4px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+
+.wrapper .message{
+	
+	width: 100%;
+	display: none;
+	background-color: rgba(254, 2, 38, .5);
+	padding: 3px 5px;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+
+.wrapper .active{
+	display: block;
+}
+
+.wrapper .validate{
+	
+}
+
+#contact #file{
+	background-color: #DEF8D3;
+}
+

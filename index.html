@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sphere</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<?php session_start(); ?>
+
+	<form enctype="multipart/form-data" action="bootstrap.php" id="contact" method="POST">
+		<div class="wrapper">
+			<label for="firstname">Імя</label>
+		    <input type="text" id="firstname" placeholder="Іван" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" name="firstname"> 
+		</div>
+
+		<div class="wrapper">
+			<label for="lastname">Прізвище</label>
+		    <input type="text" id="lastname" placeholder="Іванов" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" name="lastname">
+		</div>
+		
+		<div class="wrapper">
+			<label for="email">Email</label>
+		    <input type="email" id="email" placeholder="mail@mail.com" name="email">
+		</div>
+		
+		<div class="wrapper">
+			<label for="comment">Ваш коментар</label>
+		    <input type="text" id="comment" placeholder="Ваші думки" name="comment">
+		</div>
+		
+		<div class="wrapper">
+			<label for="file">Виберіть картинку профілю</label>
+		    <input type="file" id="file" name="user" required>
+		    <span class="message">
+		    	Виберіть картинку з розширенням jpg, gif або png!!!
+		    </span>
+		</div>
+
+		<div class="wrapper validate">
+			<span class="error">
+				<?php 
+				if(isset($_SESSION['error'])){
+				   echo $_SESSION['error'];
+			    } 
+
+			    session_destroy();
+
+				?>
+			</span>
+			
+		</div>
+		
+		<input type="submit" value="Відправити">
+	</form>
+
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/my.js"></script>
+</body>
+</html>
